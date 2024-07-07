@@ -19,7 +19,7 @@ body {
     position: absolute;
     width: 1px;
     height: 100vh;
-    background-color: grey;
+    background-color: #d9d9d9;
     animation: moveLine 5s linear infinite;
     z-index: 1;
 }
