@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const data = {
         datasets: [{
             data: [70, 30],
-            backgroundColor: ['#0056ff', '#d9d9d9'],
+            backgroundColor: ['#3E51FF', '#d9d9d9'],
             borderWidth: 0
         }],
         labels: ['Filled', 'Remaining']

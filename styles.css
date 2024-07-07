@@ -88,7 +88,7 @@ nav ul li a:hover, nav ul li a.active {
 }
 
 .btn-get-started {
-    background-color: #0056ff;
+    background-color: #3E51FF;
     color: #fff;
     padding: 10px 20px;
     border-radius: 20px;
@@ -126,7 +126,7 @@ nav ul li a:hover, nav ul li a.active {
 }
 
 .left-side h1 span {
-    color: #0056ff;
+    color: #3E51FF;
 }
 
 form {
@@ -145,11 +145,11 @@ form input[type="text"] {
 }
 
 form input[type="text"]:focus {
-    border-color: #0056ff;
+    border-color: #3E51FF;
 }
 
 form button {
-    background-color: #0056ff;
+    background-color: #3E51FF;
     color: #fff;
     border: none;
     padding: 10px 20px;
