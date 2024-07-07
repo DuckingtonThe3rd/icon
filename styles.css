@@ -4,7 +4,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     background-color: #ffffff;
-    overflow: hidden
+    overflow: hidden;
 }
 
 .lines-container {
@@ -19,20 +19,20 @@ body {
     position: absolute;
     width: 1px;
     height: 100vh;
-    background-color: #d9d9d9;
+    background-color: grey;
     animation: moveLine 5s linear infinite;
     z-index: 1;
 }
 
 .left-line {
     left: 10%;
-    animation-delay: 1s;
+    animation-delay: 0s;
 }
 
 .center-line {
     left: 50%;
     transform: translateX(-50%);
-    animation-delay: 0s;
+    animation-delay: 1s;
 }
 
 .right-line {
@@ -79,12 +79,12 @@ nav ul li a {
     text-decoration: none;
     color: #666;
     font-weight: 400;
+    transition: color 0.5s ease;
 }
 
 nav ul li a:hover, nav ul li a.active {
     color: #3E51FF;
     font-weight: 700;
-    transition: color 0.5s ease, transform 0.5s ease;
 }
 
 .btn-get-started {
@@ -141,7 +141,7 @@ form input[type="text"] {
     margin-right: 10px;
     flex: 1;
     font-family: 'Inter', sans-serif;
-    transition: border-color 0.5s ease, transform 0.5s ease;
+    transition: border-color 0.5s ease;
 }
 
 form input[type="text"]:focus {
@@ -156,7 +156,7 @@ form button {
     border-radius: 20px;
     cursor: pointer;
     font-family: 'Inter', sans-serif;
-    transition: background-color 0.5s ease, transform 0.5s ease; /* Smoother transition */
+    transition: background-color 0.5s ease, transform 0.5s ease;
 }
 
 form button:hover {
@@ -164,15 +164,25 @@ form button:hover {
     transform: scale(1.05);
 }
 
-.right-side img {
-    max-width: 120%;
-    height: auto;
-    border-radius: 20px;
-    transition: transform 0.5s ease; /* Smoother transition */
+.right-side {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.right-side img:hover {
-    transform: scale(1.1);
+.right-side canvas {
+    position: absolute;
+}
+
+.chart-text {
+    position: absolute;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+    color: #000;
 }
 
 @keyframes moveLine {
