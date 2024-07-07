@@ -144,8 +144,9 @@ form input[type="text"] {
     transition: border-color 0.5s ease;
 }
 
-form input[type="text"]:focus {
-    border-color: #3E51FF;
+form input[type="text"]:hover {
+    border-color: #0056ff;
+    box-shadow: 0 0 10px rgba(0, 86, 255, 0.2);
 }
 
 form button {
@@ -156,12 +157,11 @@ form button {
     border-radius: 20px;
     cursor: pointer;
     font-family: 'Inter', sans-serif;
-    transition: background-color 0.5s ease, transform 0.5s ease;
+    transition: background-color 0.3s ease-in-out;
 }
 
 form button:hover {
     background-color: #003bb5;
-    transform: scale(1.05);
 }
 
 .right-side {
