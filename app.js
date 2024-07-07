@@ -40,9 +40,9 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(() => {
             donutChart.data.datasets[0].data = [0, 100];
             donutChart.update();
-        }, 1000);
+        }, 2000);
     }
 
-    setInterval(animateChart, 2000);
+    setInterval(animateChart, 4000);
     animateChart();
 });
