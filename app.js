@@ -1,18 +1,3 @@
-// Firebase configuration
-const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_AUTH_DOMAIN",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_STORAGE_BUCKET",
-    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-    appId: "YOUR_APP_ID"
-};
-
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-const db = firebase.firestore();
-
-// Chart.js
 document.addEventListener('DOMContentLoaded', function() {
     const ctx = document.getElementById('donutChart').getContext('2d');
     const data = {
@@ -42,26 +27,22 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
-    new Chart(ctx, {
+    const donutChart = new Chart(ctx, {
         type: 'doughnut',
         data: data,
         options: options
     });
-});
 
-// Waitlist form
-document.getElementById('waitlist-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const email = document.getElementById('email').value;
+    function animateChart() {
+        donutChart.data.datasets[0].data = [100, 0];
+        donutChart.update();
 
-    db.collection('waitlist').add({
-        email: email,
-        timestamp: firebase.firestore.FieldValue.serverTimestamp()
-    }).then(() => {
-        alert('You have been added to the waitlist!');
-    }).catch((error) => {
-        console.error('Error adding to waitlist: ', error);
-    });
+        setTimeout(() => {
+            donutChart.data.datasets[0].data = [0, 100];
+            donutChart.update();
+        }, 2000);
+    }
 
-    document.getElementById('waitlist-form').reset();
+    setInterval(animateChart, 4000);
+    animateChart();
 });
