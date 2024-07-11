@@ -1,6 +1,6 @@
-# Icon
+# icon
 
-StudyApp is a tool designed to help users enhance their learning experience through personalized study plans and progress tracking.
+icon is a tool designed to help students enhance their learning experience through personalized study plans and progress tracking.
 
 ## Features
 
