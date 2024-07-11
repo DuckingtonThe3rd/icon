@@ -9,3 +9,6 @@ icon is a tool designed to help students enhance their learning experience throu
 - Study reminders
 - Integration with educational resources
 - User-friendly interface
+
+# Our landing page is here!
+Click [here](https://duckingtonthe3rd.github.io/icon/) to join the waitlist.
